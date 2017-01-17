@@ -1,0 +1,65 @@
+body {
+		background-position: -325 0;
+	    background-repeat: no-repeat;
+	    overflow-x:hidden;
+	}
+
+.navbar {
+    margin-top: 95;
+}
+
+.navbar ul {
+	list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+    font-size: 13;
+}
+
+.navbar li a {
+    display: block;
+    text-align: left;
+    padding: 0 10 0 10;
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.navbar ul li ul {
+	display: none;
+	position: absolute;
+	padding: 0 10 0 0;
+}
+
+.navbar ul li ul li {
+	position: relative;
+}
+
+.navbar li a:hover {
+	color: #54B6D6;
+	text-decoration: underline;
+}
+
+.navbar ul li:hover ul {
+	display: block;
+}
+
+.navbar .active {
+	color: #54B6D6;
+	text-decoration: underline;
+}
+
+.link {
+	font-size: 16;
+}
+
+.link a{
+	color: #a0a0a0;
+}
+
+.link :hover {
+	color: #54B6D6;
+	text-decoration: none;
+}
