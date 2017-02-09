@@ -1,7 +1,13 @@
 <?php
 	class Reefwatch_controller extends CI_Controller {
 		public function index() {
-			$this->load->view('reefwatch/main_page');
+			$this->load->model('Reefwatch_model');
+			$res1 = $this->Reefwatch_model->select("images","path",array("part" => 1));
+			$res2 = $this->Reefwatch_model->select("images","path",array("part" => 2));
+			$res3 = $this->Reefwatch_model->select("images","path",array("part" => 3));
+			$res4 = $this->Reefwatch_model->select("images","path",array("part" => 4));
+			$data = array("part1" => $res1,"part2" => $res2,"part3" => $res3,"part4" => $res4);
+			$this->load->view('reefwatch/main_page',$data);
 		}
 		public function aboutus() {
 			$this->load->view('reefwatch/about_us');
