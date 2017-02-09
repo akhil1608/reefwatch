@@ -36,7 +36,7 @@
 		<div class="row" style="margin: 0px;">
 			<div class="col-md-3">
 				<a href="<?php echo base_url();?>aboutus">
-					<img src="<?php echo base_url().IMG_URL;?>h1.jpg" height="340" width="326" />
+					<img src="<?php echo base_url().IMG_URL.$part1[0]["path"];?>" height="340" width="326" />
 				</a>
 				<div class="link"><a href="<?php echo base_url();?>aboutus">About Us</a></div>
 			</div>
@@ -44,13 +44,9 @@
 				<a href="<?php echo base_url();?>whatwedo">
 					<div id="slider1_container1" style="position: relative; top: 0px; left: 0px; width: 326px; height: 340px;">
 	    				<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 326px; height: 340px;">
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>HomePageSlider1.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>HomePageSlider2.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>HomePageSlider3.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>HomePageSlider4.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>HomePageSlider5.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>HomePageSlider6.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>HomePageSlider7.jpg" /></div>
+	    					<?php foreach ($part2 as $key) {?>
+							<div><img u="image" src="<?php echo base_url().IMG_URL.$key["path"];?>" /></div>
+							<?php }?>
 					    </div>
 				    </div>
 			    </a>
@@ -58,22 +54,18 @@
 			</div>
 			<div class="col-md-3">
 				<a href="<?php echo base_url();?>initiatives">
-					<img src="<?php echo base_url().IMG_URL;?>h4.jpg" height="340" width="326" />
+					<img src="<?php echo base_url().IMG_URL.$part3[0]["path"];?>" height="340" width="326" />
 				</a>
 				<div class="link"><a  href="<?php echo base_url();?>initiatives">Initiatives</a></div>
 			</div>
 			<div class="col-md-3">
 				<a href="<?php echo base_url();?>youcanhelp">
 					<div id="slider1_container2" style="position: relative; top: 0px; left: 0px; width: 326px; height: 340px;">
-	    				<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 326px; height: 340px;">
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>s1.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>s2.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>s3.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>s4.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>s5.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>s6.jpg" /></div>
-					        <div><img u="image" src="<?php echo base_url().IMG_URL;?>s7.jpg" /></div>
-					    </div>
+						<div u="slides" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 326px; height: 340px;">
+							<?php foreach ($part4 as $key) {?>
+							<div><img u="image" src="<?php echo base_url().IMG_URL.$key["path"];?>" /></div>
+							<?php }?>
+						</div>
 				    </div>
 			    </a>
 				<div class="link"><a href="<?php echo base_url();?>youcanhelp">You Can Help</a></div>
